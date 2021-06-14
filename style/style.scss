@@ -1,0 +1,253 @@
+$primaryColor: white;
+$secondaryColor: #303D63;
+
+@mixin h5Color {
+    color: $secondaryColor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 8px;
+}
+
+@mixin pColor {
+    color: $secondaryColor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container-1 {
+    background-image: url("../exports/background-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 720px;
+    padding-top: 20px;
+    
+    h1 {
+        color: $primaryColor;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 36px;
+    }
+
+    h4 {
+        color: $primaryColor;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 5px;
+    }
+
+    p {
+        color: $primaryColor;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .p-item-1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 5px;
+    }
+
+}
+
+.container-2 {
+
+    h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 48px;
+        color: #32BCAD;
+    }
+    
+    h3 {
+        color: $secondaryColor;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    
+    h5 {
+        @include h5Color();
+    }
+
+    [type=submit] {
+        background-color: #32BCAD;
+        border: 1px solid #32BCAD;
+        color: white;
+        font-weight: bold;
+        &:hover {
+            background-color: white;
+            color: #32BCAD;
+            transition: 0.5s;
+        }
+
+    }
+
+    p {
+        @include pColor();
+    }
+
+    .p-item-2{
+        color: $secondaryColor;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .p-item-3{
+        color: $secondaryColor;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .p-item-4 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #95999C;
+    }
+
+}
+
+.container-3 {
+    background-color: #F6F9FC;
+    margin-top: 60px;
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #84888C;
+    }
+    
+}
+
+
+////// COMEÇO CSS DA PAGINA DE AGRADECIMENTO ///////
+
+.all-content {
+    height: 100vh;
+}
+
+.container-1-a {
+
+}
+
+.container-2-a {
+    h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 72px;
+        color: #303D63;
+    }
+
+    button {
+        border: 1px solid #32BCAD;
+        color: $primaryColor;
+        background-color: #32BCAD;
+        border-radius: 4px;
+        font-weight: bold;
+        &:hover{
+            background-color: $primaryColor;
+            transition: 0.5s;
+            color: #32BCAD;
+        }
+    }
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        color: #95999C;
+    }
+}
+
+.container-3-a {
+    margin-top: auto;
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #84888C;
+    }
+}
+
+////// FIM CSS PAGINA DE AGRADECIMENTO //////
+
+@media screen and (max-width:700px){
+    
+    .container-1 {
+        background-image: url("../exports/mobile-background-banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        h1 {
+            font-size: 40px;
+        }
+    
+        .p-item-5 {
+            text-align: center;
+        }
+    }
+
+    .container-2 {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .container-3 {
+        .p-item-2 {
+            text-align: center;
+        }
+
+        .p-item-3 {
+            text-align: center;
+        }
+
+        .social-icon {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 601px) {
+     
+    .item-only-mobile { 
+        display: none !important; 
+    } 
+    
+    .p-item-5 {
+        padding-top: 170px;
+        padding-right: 10px;
+    }
+
+    }
+
